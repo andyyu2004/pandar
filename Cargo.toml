@@ -3,9 +3,14 @@ name = "pandar"
 version = "0.1.0"
 edition = "2018"
 
-
 [dependencies]
 bootloader = "0.9.8"
+volatile = "0.2.6"
+spin = "0.9.0"
+
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
 
 
 [profile.dev]
