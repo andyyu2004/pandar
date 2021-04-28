@@ -9,10 +9,14 @@ use pandar::println;
 
 #[no_mangle]
 pub extern "C" fn _start() -> ! {
-    println!("hello world 2");
-    #[cfg(test)]
     test_main();
+
     loop {}
+}
+
+#[test_case]
+fn test_pandar_println() {
+    println!("test println");
 }
 
 #[panic_handler]
